@@ -7,7 +7,10 @@ load_dotenv()
 
 class Chat:
     def __init__(self,messages):
-        self.messages = messages
+        mes = []
+        for message in messages:
+            mes.append({"role":"system","content":message})
+        self.messages = mes
         self.client = OpenAI(api_key=os.environ.get("KEY",""))
     
     def send_message(self, message:str) -> dict:
