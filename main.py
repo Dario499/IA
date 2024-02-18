@@ -67,8 +67,6 @@ print("Esta es la historia \"Un hombre envuelve un brazo cortado y envia el paqu
 
 Chat = clase.Chat(messages)
 while True:
-    print(respuesta)
-    print(hechos)
     respuesta = Chat.send_message(input("Escribe algo: "))
     if respuesta["respuesta"] in ["Sí","Si","si","sí"]:
        print(random.choice(formas_de_decir_si))
