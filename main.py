@@ -1,5 +1,6 @@
 import clase
 import random
+from record_voice import grabar
 
 formas_de_decir_si = [
     "Sí",
@@ -67,7 +68,8 @@ print("Esta es la historia \"Un hombre envuelve un brazo cortado y envia el paqu
 
 Chat = clase.Chat(messages)
 while True:
-    respuesta = Chat.send_message(input("Escribe algo: "))
+    input("Pulsa ENTER para grabar")
+    respuesta = Chat.send_message(grabar())
     if respuesta["respuesta"] in ["Sí","Si","si","sí"]:
        print(random.choice(formas_de_decir_si))
     else:

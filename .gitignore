@@ -164,3 +164,4 @@ atlassian-ide-plugin.xml
 # Local History for Visual Studio Code
 .history/
 ignore/
+.wav
