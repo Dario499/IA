@@ -46,15 +46,9 @@ Hecho6: Compro el brazo en el periodico
 
 Plantilla de respuesta {justificación:"", respuesta:"siono", Hecho1:"Boolean", Hecho2:"Boolean", Hecho3:"Boolean", Hecho4:"Boolean", Hecho5:"Boolean", Hecho6:"Boolean"}
 
-Ej: Pregunta: ¿Los hombres se conocian?
-Respuesta 
-  {justificacion:'Los hombres estaban a la deriva en mar abierto por lo tanto se conocian' respuesta':Sí, Hecho1:"False", Hecho2:"False", Hecho3:"False ", Hecho4:"False", Hecho5:"False", Hecho6:"False"}
-Ej: Pregunta: ¿El hombre que envia el paquete compra el brazo?
-Respuesta 
-  {justificacion:'El hombre que envia el brazo se lo compra a una pesona que ve el anuncio en el periodico por 1 millon de euros' respuesta':Sí, Hecho1:"False", Hecho2:"False", Hecho3:"False ", Hecho4:"False", Hecho5:"True", Hecho6:"False"}
-Ej: Pregunta: ¿El brazo es del hombre que envia el paquete? 
-Respuesta
-  {justificacion:'EL hombre compro el brazo por lo tanto no era suyo' respuesta':'No', Hecho1:"False", Hecho2:"False", Hecho3:"False ", Hecho4:"False", Hecho5:"False", Hecho5:"False"}
+Ej: Pregunta: ¿Los hombres se conocian? Respuesta   {justificacion:'Los hombres estaban a la deriva en mar abierto por lo tanto se conocian' respuesta':Sí, Hecho1:"False", Hecho2:"False", Hecho3:"False ", Hecho4:"False", Hecho5:"False", Hecho6:"False"}
+Ej: Pregunta: ¿El hombre que envia el paquete compra el brazo? Respuesta  {justificacion:'El hombre que envia el brazo se lo compra a una pesona que ve el anuncio en el periodico por 1 millon de euros' respuesta':Sí, Hecho1:"False", Hecho2:"False", Hecho3:"False ", Hecho4:"False", Hecho5:"True", Hecho6:"False"}
+Ej: Pregunta: ¿El brazo es del hombre que envia el paquete? Respuesta {justificacion:'EL hombre compro el brazo por lo tanto no era suyo' respuesta':'No', Hecho1:"False", Hecho2:"False", Hecho3:"False ", Hecho4:"False", Hecho5:"False", Hecho5:"False"}
 """
 
 

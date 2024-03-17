@@ -3,6 +3,10 @@ import typer
 import random
 from dotenv import load_dotenv
 import os
+import maincopy
+import psycopg2.extras
+
+
 
 load_dotenv()
 
@@ -37,7 +41,18 @@ def new_example():
 @app.command()
 def play_story():
     cur.execute("SELECT * FROM stories")
-    print(random.choice(cur.fetchall()))
+    historia = random.choice(cur.fetchall())
+    uuid = historia[0]
+    cur.execute("SELECT * FROM examples WHERE story_id = %s",(str(uuid),))
+    ejemplos = []
+    for ejemplo in cur.fetchall():
+        ejemplos.append(ejemplo[2])
+    cur.execute("SELECT * FROM milestones WHERE story_id = %s",(str(uuid),))
+    milesotnes = []
+    for milestone in cur.fetchall():
+        milesotnes.append(milestone[2])
+    maincopy.juego(historia[1],historia[2],milesotnes,ejemplos)
+    
 
 
 
