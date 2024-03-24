@@ -24,12 +24,24 @@ def new_story():
     cur.execute("""INSERT INTO stories (large_story, short_story, name) VALUES ('{}','{}','{}')""".format(large_story,short_story,name))
     conn.commit()
 
+class Milestone():
+    def __init__(self,uuid,storyid,descripcion) -> None:
+        self.uuid = uuid
+        self.storyid = storyid
+        self.descripcion = descripcion
+
 @app.command()
 def new_milestone():
     descripcion: str = input("Descripción: ")
     id_historia: str = input("ID de la historia: ")
     cur.execute("""INSERT INTO milestones (story_id,description) VALUES ('{}','{}')""".format(id_historia,descripcion))
     conn.commit()
+
+class Example():
+    def __init__(self,uuid,storyid,descripcion) -> None:
+        self.uuid = uuid
+        self.storyid = storyid
+        self.descripcion = descripcion
 
 @app.command()
 def new_example():

@@ -1,4 +1,4 @@
-import clase
+import chat
 import random
 from record_voice import grabar
 
@@ -69,7 +69,7 @@ def juego(historia):
 
   print("Esta es la historia \"{}\"".format(historia.historia_corta))
 
-  Chat = clase.Chat(messages)
+  Chat = chat.Chat(messages)
   while True:
       input("Pulsa ENTER para grabar")
       respuesta = Chat.send_message(grabar())
