@@ -3,7 +3,7 @@ import typer
 import random
 from dotenv import load_dotenv
 import os
-import maincopy
+import main
 import psycopg2.extras
 
 
@@ -38,6 +38,15 @@ def new_example():
     cur.execute("""INSERT INTO examples (story_id, example) VALUES ('{}','{}')""".format(id_historia, descripcion))
     conn.commit()
 
+class Historia():
+    def __init__(self, uuid, historia_larga, historia_corta, milestones, ejemplos):
+        self.uuid = uuid
+        self.historia_larga = historia_larga
+        self.historia_corta = historia_corta
+        self.milestones = milestones
+        self.ejemplos = ejemplos
+
+
 @app.command()
 def play_story():
     cur.execute("SELECT * FROM stories")
@@ -51,9 +60,7 @@ def play_story():
     milesotnes = []
     for milestone in cur.fetchall():
         milesotnes.append(milestone[2])
-    maincopy.juego(historia[1],historia[2],milesotnes,ejemplos)
-    
-
-
+    story = Historia(uuid,historia[1],historia[2], milesotnes, ejemplos)
+    main.juego(story)
 
 app()
